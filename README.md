@@ -9,7 +9,9 @@ The inputs to the python script are:
 
 ```
 python log_analyzer app.log "2023-03-02 09:03:23" "2023-03-08 10:34:34"
+```
                       OR
+```
 python log_analyzer app.log
 ```
 
