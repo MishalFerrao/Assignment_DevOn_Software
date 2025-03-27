@@ -81,6 +81,8 @@ def most_common_error_messages(logs_dict):
         else:
             log_error_dict[logs_dict[i]["log_message"]] = 1
 
+    # get the maximum value in the dict and its corresponding key as a list in case of 
+    # more than one error message is present
     maxval = max(log_error_dict.values())
     max_count_log_error_list = [k for k in log_error_dict if log_error_dict[k]==maxval]
 
@@ -135,7 +137,7 @@ def filter_logs_based_on_date(start,end,logs_dict):
         print("End time not in the %Y-%m-%d format or %Y-%m-%d %H:%M:%S format")
         return 0
         
-
+    #Exchange the start time and end time if start is greater than end
     if start_time > end_time:
         start_time, end_time = end_time, start_time
 
@@ -170,6 +172,9 @@ def log_analyzer(arguments):
     
     save_summary(summary)
 
+
+    # filters the log only if both start and end date is provided as input argument in 
+    # the required format
     if len(arguments) == 3:
         filtered_logs = {}
         filtered_logs = filter_logs_based_on_date(arguments[1],arguments[2],logs)
