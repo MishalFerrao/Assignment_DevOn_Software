@@ -7,11 +7,12 @@ The inputs to the python script are:
 * Start data in **%Y-%m-%d** format or **%Y-%m-%d %H:%M:%S** format
 * End data in **%Y-%m-%d** format or **%Y-%m-%d %H:%M:%S** format
 
+Example:
 ```
 python log_analyzer app.log "2023-03-02 09:03:23" "2023-03-08 10:34:34"
-```
-                      OR
-```
+
+       OR
+
 python log_analyzer app.log
 ```
 
