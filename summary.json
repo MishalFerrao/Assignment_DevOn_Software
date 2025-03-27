@@ -1,0 +1,1 @@
+{"file_name": "app.log", "log_level_count": {"INFO": 6, "ERROR": 4, "WARN": 2, "DEBUG": 1}, "services_count": {"ServiceA": 4, "ServiceB": 4, "ServiceC": 2, "ServiceD": 1, "???": 1, "ServiceE": 1}, "most_common_log": ["Null pointer exception\n"]}
