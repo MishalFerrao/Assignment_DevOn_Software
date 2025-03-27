@@ -98,7 +98,7 @@ def save_summary(data):
     with open("summary.json", "w") as outfile:
         json.dump(data, outfile)
 
-def filter_logs(start,end,logs_dict):
+def filter_logs_based_on_date(start,end,logs_dict):
     """
     Filter the logs based on start date and end date
     
@@ -172,7 +172,7 @@ def log_analyzer(arguments):
 
     if len(arguments) == 3:
         filtered_logs = {}
-        filtered_logs = filter_logs(arguments[1],arguments[2],logs)
+        filtered_logs = filter_logs_based_on_date(arguments[1],arguments[2],logs)
         if filtered_logs != 0:
             print(filtered_logs)
 
